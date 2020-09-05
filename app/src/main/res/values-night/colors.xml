@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--colors for dark mode-->
+    <color name="contentBodyColor">#121212</color>
+    <color name="contentTextColor">#fff</color>
+    <color name="miniTitle">#fff</color>
+    <color name="cardcolor">#212121</color>
+    <color name="cardcolor2">#FCFCFC</color>
+    <color name="negative_percentage">@color/red</color>
+    <color name="positive_percentage">#2E7D32</color>
+</resources>

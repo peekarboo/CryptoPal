@@ -1,0 +1,31 @@
+<com.google.android.material.chip.ChipGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:singleSelection="true"
+    app:checkedChip="@+id/usdbutton"
+    app:singleLine="false"
+    android:id="@+id/togglebuttons">
+
+    <com.google.android.material.chip.Chip
+
+        android:id="@+id/usdbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/contentTextColor"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:text="USD" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/gbpbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:textColor="@color/contentTextColor"
+        android:text="GBP"
+     />
+
+
+</com.google.android.material.chip.ChipGroup>

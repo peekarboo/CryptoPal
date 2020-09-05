@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="headerTextSize">25sp</dimen>
+    <dimen name="column_width">180dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="table_margin">12dp</dimen>
+    <dimen name="chart_line_width">3dp</dimen>
+    <dimen name="edge_item_medium">16sp</dimen>
+    <dimen name="edge_item_large">20sp</dimen>
+    <dimen name="edge_item_small">12sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_icons8_home_"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/ic_icons8_news"
+        android:title="News" />
+    <item
+        android:id="@+id/nav_market"
+        android:icon="@drawable/ic_growth"
+        android:title="Market" />
+    <item
+        android:id="@+id/nav_exchange"
+        android:icon="@drawable/ic_exchange"
+        android:title="Exchanges" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_icons8_settings"
+        android:title="Settings" />
+</menu>

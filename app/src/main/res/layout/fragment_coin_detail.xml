@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoinDetailFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layoutDirection="rtl">
+    <TextView
+        android:id="@+id/coin_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="@string/bitcoin"
+        android:textColor="@color/contentTextColor"/>
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/detail_chip_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/bitcoin"
+        app:checkedChip="@id/detail_daily_chip"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        app:singleLine="false"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/detail_daily_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1d"
+            android:textColor="@color/contentTextColor" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/detail_monthly_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1m"
+            android:textColor="@color/contentTextColor"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/detail_three_months_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3m"
+            android:textColor="@color/contentTextColor"/>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/detail_all_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chart_all"
+            android:textColor="@color/contentTextColor"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_margin="12dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ProgressBar
+            android:id="@+id/table_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/cardcolor"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        >
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline1_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.72" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline2_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.39" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline3_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.71" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/name"
+                            style="@style/MainListItemText"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginStart="8dp"
+                            android:textAlignment="viewEnd"
+                            android:text="@string/change_24h"
+                            app:layout_constraintBottom_toTopOf="@+id/changepct"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline1_percent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread"
+                            tools:text="Change % (24h) " />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/changepct"
+                            style="@style/MainListItemText"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/contentTextColor"
+                            android:textDirection="locale"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline1_percent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="@+id/guideline2_percent"
+                            app:layout_constraintTop_toBottomOf="@+id/name"
+                            tools:text="0.03%" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/markettext"
+                            style="@style/MainListItemText"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/market_cap"
+                            android:textAlignment="viewEnd"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/marketcap"
+                            app:layout_constraintStart_toStartOf="@+id/guideline1_percent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread"
+                            tools:text="MARKET CAP" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/marketcap"
+                            style="@style/MainListItemText"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginStart="4dp"
+                            android:textAlignment="viewEnd"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/guideline1_percent"
+                            app:layout_constraintTop_toBottomOf="@+id/markettext"
+                            tools:text="20,75USD" />
+
+                        <include
+                            layout="@layout/add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/changepct"
+                            app:layout_constraintHorizontal_bias="0.036"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/predbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="get prediction"/>
+
+        <include layout="@layout/ohlc" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
